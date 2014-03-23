@@ -1,0 +1,34 @@
+.header {
+  @include position(fixed, 0 0 auto 0);
+  background: $color-light-blue;
+  height: 100px; // no need for clearfix since the height is fixed
+  line-height: 1;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+.header.__narrow {
+  height: 60px;
+  opacity: 0.9;
+
+  .menu_i {
+    height: 60px;
+    padding: 22px 20px 12px;
+  }
+
+  .menu_i.__iconic {
+    padding: 6px 0 0;
+  }
+}
+
+.header_logo {
+  transform: scale(1.0);
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  &:active {
+    transform: scale(.97);
+  }
+}

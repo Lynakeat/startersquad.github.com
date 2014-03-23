@@ -1,0 +1,29 @@
+.heaven
+  .arkush.clearfix
+
+      case page.menu_index
+        when 0: span.brand.pull-left StarterSquad
+        default: a.brand.pull-left(href='/') StarterSquad
+
+      .pull-right
+          ul.menu.pull-left
+            | {% for item in page.menu %}
+            | {% if forloop.index0 == page.menu_index %}
+            | {% if page.force_menu_link %}
+            li.is-active
+              a.link_complex(href='{{ item.href }}')
+                u {{ item.title }}
+            | {% else %}
+            li.is-active {{ item.title }}
+            | {% endif %}
+            | {% else %}
+            li
+              a.link_complex(href='{{ item.href }}')
+                u {{ item.title }}
+            | {% endif %}
+            | {% endfor %}
+          | {% if page.menu_index == 5 %}
+          span.button.button-azure.disabled.pull-left Get in touch
+          | {% else %}
+          a#contact-link.button.button-azure.pull-left(href='/contact') Get in touch
+          | {% endif %}

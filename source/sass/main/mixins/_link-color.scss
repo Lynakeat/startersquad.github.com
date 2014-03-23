@@ -1,0 +1,10 @@
+// Link color
+// ==========
+
+@mixin link-color($color) {
+
+  &,
+  & .link_u {
+    color: $color;
+  }
+}

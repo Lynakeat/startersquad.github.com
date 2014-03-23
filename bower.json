@@ -1,0 +1,12 @@
+{
+  "name": "Bundles",
+  "version": "0.1.0",
+  "main": "source/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "normalize-css": "latest"
+  }
+}

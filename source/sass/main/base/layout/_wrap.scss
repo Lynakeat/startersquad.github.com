@@ -1,0 +1,10 @@
+// Wrap
+// ====
+
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  padding-left: $layout-gutter;
+  padding-right: $layout-gutter;
+}

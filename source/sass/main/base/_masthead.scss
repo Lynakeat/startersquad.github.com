@@ -1,0 +1,60 @@
+.masthead {
+  background: $color-light-blue;
+  color: #FFF;
+  padding: 135px 0 160px;
+  position: relative;
+
+  .rich {
+    h1 {
+      margin: 55px 0 40px;
+    }
+
+    ul {
+      margin-top: 50px;
+    }
+  }
+}
+
+.masthead_footer_c,
+.masthead_footer_l,
+.masthead_footer_r {
+  @include position(absolute, none none 0);
+  background-repeat: no-repeat;
+  height: 60px;
+  z-index: 2;
+}
+
+.masthead_footer_c {
+  background-image: inline-asset('masthead/center.svg');
+  background-position: bottom center;
+  left: 50%;
+  margin-left: -30px;
+  width: 60px;
+}
+
+.masthead_footer_l {
+  background-image: inline-asset('masthead/left.svg');
+  background-size: 100% 100%;
+  left: 0;
+  margin-right: 30px;
+  right: 50%;
+}
+
+.masthead_footer_r {
+  background-image: inline-asset('masthead/right.svg');
+  background-size: 100% 100%;
+  left: 50%;
+  margin-left: 30px;
+  right: 0;
+}
+
+.masthead_bubbles {
+  @include position(absolute, auto 0 -20px 0);
+  @include size(100% 197px);
+  background: inline-asset('masthead/bubbles.png') center center repeat-x;
+  z-index: 1;
+}
+
+.masthead_arrow {
+  @include position(absolute, none none 0 350px);
+}

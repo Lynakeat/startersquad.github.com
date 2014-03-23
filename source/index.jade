@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    script(type='text/javascript', async='', src='http://mc.yandex.ru/metrika/watch.js')
+    script(type='text/javascript', async='', src='http://www.google-analytics.com/ga.js')
+    script(type='text/javascript', async='', src='http://d36lvucg9kzous.cloudfront.net')
+    script (function(H){H.className=H.className.replace(/\\bno-js\b/,'js')})(document.documentElement)
+    meta(charset='utf-8')
+    meta(content='IE=edge,chrome=1', http-equiv='X-UA-Compatible')
+    title StarterSquad
+    meta(name='description', content='Our team of professionals works for startups only. Serious and invested, we will develop your idea and take your project to the next level.')
+    meta(content='width=1000', name='viewport')
+    link(href='//fonts.googleapis.com/css?family=Lato:400,i,b,bi', rel='stylesheet')
+    link(rel="stylesheet", href="assets/css/main.css?bust=v0.1.0")
+    script(type='text/javascript') var heap=heap||[];heap.load=function(a){window._heapid=a;var b=document.createElement("script");b.type="text/javascript",b.async=!0,b.src=("https:"===document.location.protocol?"https:":"http:")+"//d36lvucg9kzous.cloudfront.net";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}},e=["identify","track"];for(var f=0;f<e.length;f++)heap[e[f]]=d(e[f])}; console.log('loading heap'); heap.load("2794372135");
+
+  body
+    layout-page
+      layout-page-top
+        include /includes/heaven
+
+        showcase
+          include /includes/home/headline
+          include /includes/home/carousel
+        arkush
+          include /includes/home/team
+        include /includes/home/challenge
+        arkush
+          include /includes/home/benefits
+        include /includes/home/quotes
+        include /includes/home/blog
+
+      layout-page-bottom
+        include /includes/hell
+
+    script(src='js/srcset.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\\/script>')
+    script(src='js/jquery.bureaucrat.js')
+    script(src='js/jquery.carouFredSel.js')
+    script(src='js/ui.js')

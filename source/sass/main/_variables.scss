@@ -1,0 +1,37 @@
+// Font weights:
+$thin:        100;
+$extra-light: 200;
+$ultra-light: 200;
+$light:       300;
+$normal:      400;
+$regular:     400;
+$medium:      500;
+$semi-bold:   600;
+$demi-bold:   600;
+$bold:        700;
+$extra-bold:  800;
+$ultra-bold:  800;
+$black:       900;
+$heavy:       900;
+
+// Font stacks
+$arial: Arial, sans-serif;
+$consolas: Consolas, monospace;
+$open-sans: 'Open Sans', sans-serif;
+
+// Grid
+$grid-columns: 24; // number of columns
+$grid-gutter: 10px; // gap between columns
+
+// Colors
+$color-light-blue: #00a3e4;
+$color-blue: #34495e;
+$color-dark-blue: #1d5a82;
+$color-red: #e74c3c;
+$color-light-gray: #8d8d8d;
+$color-gray: #7c818b;
+$color-dark-gray: #484847;
+
+// Shadows
+$glow-shadow: 0 0 5px rgba($color-blue, 0.15);
+$osx-shadow: 0 22px 70px 4px rgba(#000, 0.56);

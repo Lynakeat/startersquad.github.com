@@ -1,0 +1,28 @@
+.panel {
+  color: $color-light-gray;
+  padding: 50px 0;
+}
+
+.panel {
+
+  &.__white {}
+
+  &.__gray {
+    background: #ecf0f1;
+  }
+
+  &.__dark-blue {
+    background: #34495e;
+    color: #FFF;
+  }
+
+  &.__bordered {
+    border-bottom: 1px solid #d6dae1;
+    border-top: 1px solid #d6dae1;
+  }
+
+  &.__last {
+    padding-bottom: 5px;
+    padding-top: 25px;
+  }
+}

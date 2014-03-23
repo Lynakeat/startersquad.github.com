@@ -1,0 +1,28 @@
+// Container for an icon.
+//
+
+.ic { // Font icon
+  @include position(relative, 1px none none);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 1;
+
+  @each $icon in (
+    bundles,
+    feature-1,
+    feature-2,
+    feature-3,
+    feature-4,
+    feature-5,
+    feature-6
+  ) {
+
+    $icon-path: "ic/#{ $icon }.png";
+
+    &.__#{ $icon } {
+      background-image: inline-asset($icon-path);
+      @include image-size($icon-path);
+    }
+  }
+}

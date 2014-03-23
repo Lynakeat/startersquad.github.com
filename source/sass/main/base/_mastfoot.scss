@@ -1,0 +1,44 @@
+.mastfoot {
+  background: $color-light-blue;
+  color: #FFF;
+  padding: 35px 0 120px;
+  position: relative;
+
+  .rich {
+    h1 {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+.mastfoot_footer_c,
+.mastfoot_footer_l,
+.mastfoot_footer_r {
+  @include position(absolute, none none 0);
+  background-repeat: no-repeat;
+  height: 60px;
+}
+
+.mastfoot_footer_c {
+  background-image: inline-asset('mastfoot/center.svg');
+  background-position: bottom center;
+  left: 50%;
+  margin-left: -30px;
+  width: 60px;
+}
+
+.mastfoot_footer_l {
+  background-image: inline-asset('mastfoot/left.svg');
+  background-size: 100% 100%;
+  left: 0;
+  margin-right: 30px;
+  right: 50%;
+}
+
+.mastfoot_footer_r {
+  background-image: inline-asset('mastfoot/right.svg');
+  background-size: 100% 100%;
+  left: 50%;
+  margin-left: 30px;
+  right: 0;
+}

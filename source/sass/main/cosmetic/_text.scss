@@ -1,0 +1,43 @@
+// Text
+// ====
+
+// Alignment
+// ---------
+
+.align-c {
+  text-align: center;
+}
+
+.align-j {
+  text-align: justify;
+}
+
+.align-l {
+  text-align: left;
+}
+
+.align-r {
+  text-align: right;
+}
+
+// Misc.
+// ----
+
+.text-bound {
+  max-width: 48em;
+}
+
+// Color
+// -----
+
+.color-gray {
+  color: $color-gray;
+}
+
+.color-dark-gray {
+  color: $color-dark-gray;
+}
+
+.color-light-gray {
+  color: $color-light-gray;
+}

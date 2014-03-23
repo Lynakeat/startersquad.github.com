@@ -1,0 +1,29 @@
+.ribbon {
+  background-color: #00a3e4;
+  color: #FFF;
+  display: inline-block;
+  font-weight: $regular;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 9px 40px;
+  position: relative;
+
+  &:before,
+  &:after {
+    @include position(absolute, 0 none none none);
+    @include size(44px 48px);
+    content: '';
+  }
+
+  &:before {
+    background-image: inline-asset('ribbon/left.png');
+    left: -34px;
+    top: 9px;
+  }
+
+  &:after {
+    background-image: inline-asset('ribbon/right.png');
+    right: -34px;
+    top: 9px;
+  }
+}

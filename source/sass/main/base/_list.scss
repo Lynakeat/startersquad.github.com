@@ -1,0 +1,19 @@
+.list {
+  padding-left: 0 !important;
+
+  &.__arrow {
+    list-style: inline-asset('list/arrow.png') outside;
+
+    li {
+      margin-left: 20px;
+    }
+  }
+
+  &.__circle {
+    list-style: inline-asset('list/circle.png') outside;
+
+    li {
+      margin-left: 14px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.menu {
+  @extend %clearfix;
+  @include font-height(14px, 1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.menu_i {
+  float: left;
+  height: 100px;
+  padding: 40px 20px;
+  transition: all 0.5s;
+
+  &:last-child .menu_link {
+    padding-right: 0;
+  }
+}
+
+.menu_link {
+  border-bottom: 1px solid transparent;
+  display: block;
+  padding: 2px 2px 4px 2px;
+  transition: all 0.5s;
+
+  &.__active {
+    border-bottom-color: #FFF;
+  }
+}
+
+// Modfiers
+// --------
+
+.menu_i {
+
+  &.__iconic {
+    padding: 21px 0 33px;
+
+    .menu_link {
+      padding: 0;
+      width: 178px;
+    }
+  }
+}

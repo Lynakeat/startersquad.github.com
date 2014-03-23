@@ -1,0 +1,20 @@
+{
+  "name": "Bundles",
+  "description": "Bundles",
+  "repository": "git@github.com:StarterSquad/bundles.git",
+  "version": "0.1.0",
+  "devDependencies": {
+    "bower": "latest",
+    "event-stream": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "latest",
+    "gulp-jade": "latest",
+    "gulp-livereload": "latest",
+    "gulp-replace": "latest",
+    "gulp-ruby-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "tiny-lr": "latest"
+  }
+}

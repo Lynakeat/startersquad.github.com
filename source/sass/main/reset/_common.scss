@@ -1,0 +1,47 @@
+// Common
+// ======
+//
+// Optionated defaults.
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html {
+  color: $color-dark-gray;
+  font: 14px/1.4 $open-sans;
+  font-weight: $regular;
+  min-width: 1000px;
+  overflow-y: scroll;
+}
+
+%italic,
+address,
+cite,
+dfn,
+em,
+i,
+var {
+  font-family: $arial;
+}
+
+// use semi bold instead of bold
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: $semi-bold;
+}
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// Customize the background color to match your design.
+
+::selection {
+  background: highlight;
+  text-shadow: none;
+}

@@ -1,0 +1,40 @@
+// Link
+// ====
+
+%link,
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+// Modifiers
+// ---------
+
+%link,
+.link {
+  font-size: 14px;
+
+  // ### Colors
+
+  &.__white{
+    @include link-color(#fff);
+
+    &:hover {
+      @include link-color(#eee);
+    }
+  }
+
+  &.__blue {
+    @include link-color($color-light-blue);
+
+    &:hover {
+      @include link-color($color-blue);
+    }
+  }
+
+  // ### Complex link
+
+  &.__complex {
+    background: none !important;
+  }
+}
