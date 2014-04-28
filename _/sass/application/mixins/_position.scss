@@ -1,34 +1,29 @@
-@mixin position ($position, $coordinates: false) {
+// Position
+// ========
+//
+// Shorthand notation for setting position of an element.
+//
+// The first parameter is optional and sets `position` of an element
+// (`absolute`, `relative`, etc.)
+//
+// The second parameter is a space delimited list of offsets (`top`, `right`,
+// etc.) that follows the standard CSS shorthand notation.
+//
+// Offsets passed as `none` are not being output.
+
+@mixin position ($position, $coordinates: none) {
 
   @if type-of($position) == list {
     $coordinates: $position;
-  }
-  @else {
+  } @else {
     position: $position;
   }
 
   @if $coordinates {
     $coordinates: unpack($coordinates);
-
-    $top:    nth($coordinates, 1);
-    $right:  nth($coordinates, 2);
-    $bottom: nth($coordinates, 3);
-    $left:   nth($coordinates, 4);
-
-    @if $top {
-      top: $top;
-    }
-
-    @if $right {
-      right: $right;
-    }
-
-    @if $bottom {
-      bottom: $bottom;
-    }
-
-    @if $left {
-      left: $left;
-    }
+    @include reject(top, nth($coordinates, 1), none);
+    @include reject(right, nth($coordinates, 2), none);
+    @include reject(bottom, nth($coordinates, 3), none);
+    @include reject(left, nth($coordinates, 4), none);
   }
 }

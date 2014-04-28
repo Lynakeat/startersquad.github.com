@@ -1,8 +1,8 @@
 .button {
-  @include box-sizing(border-box);
   @include font-height(14px, 16px);
   background-clip: padding-box;
   border-radius: 2px;
+  box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;

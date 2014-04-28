@@ -29,8 +29,8 @@
 }
 
 .bubble-main {
-  @include backface-visibility(hidden);
   @include size(135px);
+  -webkit-backface-visibility: hidden;
   cursor: default;
   position: relative;
   z-index: 0;
@@ -38,7 +38,7 @@
   &:after {
     @include position(absolute, -4px false false -4px);
     @include size(143px);
-    background: sprite($sprite-main, bubble-mask);
+    background: inline-asset('sprite-main/bubble-mask.png');
     content: '';
     // z-index: 2;
   }
@@ -48,8 +48,8 @@
 .bubble-backside {
   @include position(absolute, 0 false false 0);
   @include size(135px);
-  @include transition(all 0.3s);
   border-radius: 67px;
+  transition: all 0.3s;
 }
 
 .bubble-main > img {
@@ -57,20 +57,20 @@
 }
 
 .bubble-backside {
-  @include transform(rotate(15deg));
   background: $color-scarlett;
   line-height: 135px;
   opacity: 0;
+  transform: rotate(15deg);
   z-index: 1;
 }
 
 .bubble-main:hover > .bubble-backside {
-  @include transform(none);
   opacity: 1;
+  transform: none;
 }
 
 .bubble-main:hover > .bubble-backside + img {
-  @include transform(rotate(15deg));
+  transform: rotate(15deg);
 }
 
 .bubble-backside-text {
@@ -90,7 +90,7 @@
   }
   > .bubble-main:after {
     @include size(88px);
-    background: sprite($sprite-main, bubble-small-mask);
+    background: inline-asset('sprite-main/bubble-small-mask.png');
   }
   > .bubble-footer {
     margin-left: -40px;

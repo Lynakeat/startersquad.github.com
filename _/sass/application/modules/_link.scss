@@ -1,5 +1,5 @@
 @mixin link-color($color, $underline-opacity: 0.35) {
-  background-image: stroke-url(rgba($color, $underline-opacity));
+  background-image: inline-stroke(rgba($color, $underline-opacity));
   color: $color;
 }
 

@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
-gem "bourbon", "~> 3.1.7"
-gem 'compass'
-gem 'jekyll'
+gem 'autoprefixer-rails'
+gem 'chunky_png'
+gem 'cssesc'
+gem 'dimensions'
+gem 'mime-types'
+gem 'rake'
+gem 'sass'
 gem 'sass-globbing'
 
 # https://github.com/mojombo/jekyll/issues/970

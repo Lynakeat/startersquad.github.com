@@ -1,9 +1,9 @@
 .brand {
   @extend .hide-text;
-  @include sprite-dimensions($sprite-main, brand);
-  background: sprite($sprite-main, brand);
+  @include image-size('sprite-main/brand.png');
+  background: inline-asset('sprite-main/brand.png');
 }
 
 a.brand:hover {
-  background-position: sprite-position($sprite-main, brand-hover);
+  background: inline-asset('sprite-main/brand-hover.png');
 }

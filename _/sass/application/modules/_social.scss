@@ -1,25 +1,26 @@
 @mixin social-link-image($name) {
   .social-link-#{ $name } {
-    @include sprite-dimensions($sprite-main, social-#{ $name });
-    background-position: sprite-position($sprite-main, social-#{ $name });
+    @include image-size('sprite-main/social-#{$name}.png');
+    background-image: inline-asset('sprite-main/social-#{$name}.png');
 
     &:hover {
-      background-position: sprite-position($sprite-main, social-#{ $name }-hover);
+      background-image: inline-asset('sprite-main/social-#{$name}-hover.png');
     }
 
     .social-inverse > & {
-      background-position: sprite-position($sprite-main, social-#{ $name }-inverse);
+      background-image: inline-asset('sprite-main/social-#{$name}-inverse.png');
     }
 
     .social-inverse > &:hover {
-      background-position: sprite-position($sprite-main, social-#{ $name }-inverse-hover);
+      background-image: inline-asset('sprite-main/social-#{$name}-inverse-hover.png');
     }
   }
 }
 
 .social-link {
   @extend .hide-text;
-  background-image: sprite-url($sprite-main);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   display: inline-block;
 }
 

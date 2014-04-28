@@ -2,14 +2,15 @@
   $selector: asset-#{ $name };
 
   .#{ $selector } {
-    @include sprite-dimensions($sprite-main, $selector);
-    background-position: sprite-position($sprite-main, $selector);
+    @include image-size('sprite-main/#{$selector}.png');
+    background-image: inline-asset('sprite-main/#{$selector}.png');
   }
 }
 
 .asset {
   @extend .hide-text;
-  background-image: sprite-url($sprite-main);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   display: inline-block;
 }
 
@@ -22,5 +23,5 @@
 
 .asset-rotator {
   @include size(16px);
-  background: image-url('animated-rotator.gif');
+  background: inline-asset('animated-rotator.gif');
 }
