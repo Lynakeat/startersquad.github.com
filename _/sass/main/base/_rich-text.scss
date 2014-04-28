@@ -1,0 +1,118 @@
+%rich,
+.rich {
+  @include font-height(13px, 1.62);
+}
+
+// Headings
+// --------
+
+@include rich-selector(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.1;
+  margin: 36px 0 13px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+@include rich-selector(h1, h2, h3) {
+  color: $color-scarlett;
+  font-family: $montserrat;
+}
+
+@include rich-selector(h1) {
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@include rich-selector(h2) {
+  font-size: 24px;
+}
+
+@include rich-selector(h3) {
+  font-size: 16px;
+}
+
+@include rich-selector(h4) {
+  color: $color-scarlett;
+  font-weight: bold;
+}
+
+// Block elements
+// --------------
+
+@include rich-selector(blockquote, ol, p, table, ul) {
+  margin: 0 0 13px;
+}
+
+@include rich-selector(blockquote) {
+  border-left: 4px solid #999;
+  color: #999;
+  padding-left: 12px;
+}
+
+@include rich-selector(ol, ul) {
+  padding-left: 21px;
+
+  > li + li {
+    margin-top: 6px;
+  }
+}
+
+@include rich-selector(ol) {
+  counter-reset: li;
+  list-style: none;
+
+  > li:before {
+    content: counter(li) '\2e\a0';
+    counter-increment: li;
+    float: left;
+    font-size: 12px;
+    margin: 1px 0 0 -21px;
+    text-align: right;
+  }
+}
+
+@include rich-selector(table) {
+
+  td,
+  th {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  td + td,
+  th + th {
+    padding-left: 36px;
+  }
+
+  th {
+    text-align: left;
+  }
+}
+
+@include rich-selector(ul) {
+  list-style: square;
+}
+
+// Misc.
+// ----
+
+@include rich-selector(a) {
+  @extend %link, %link_style_blue-grey;
+}
+
+@include rich-selector(hr) {
+  border-color: #dadada;
+  border-style: solid;
+  border-width: 2px 0 0;
+  margin: 36px auto;
+  width: 15%;
+}
+
+@include rich-selector(img) {
+  display: block;
+  max-width: 100%;
+}
